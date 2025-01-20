@@ -118,5 +118,4 @@ open coverage/html/index.html
 
 ### Demo
 
-![App Demo 1](First-demo.webm)
-![App Demo 2](Second-Demo.webm)
+![App Demo](assets/demo.gif)
