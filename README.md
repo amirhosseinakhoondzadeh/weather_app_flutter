@@ -100,22 +100,24 @@ open coverage/html/index.html
 
 ### Dependencies
 
-[dartz]("https://pub.dev/packages/dartz"): Functional programming in Dart.
+[dartz](https://pub.dev/packages/dartz): Functional programming in Dart.
 
-[equatable]("https://pub.dev/packages/equatable"): Simplifies equality comparisons.
+[equatable](https://pub.dev/packages/equatable): Simplifies equality comparisons.
 
-[flutter_bloc]("https://pub.dev/packages/flutter_bloc"): State management.
+[flutter_bloc](https://pub.dev/packages/flutter_bloc): State management.
 
-[get_it]("https://pub.dev/packages/get_it"): Dependency injection.
+[get_it](https://pub.dev/packages/get_it): Dependency injection.
 
-[http]("https://pub.dev/packages/http"): HTTP requests.
+[http](https://pub.dev/packages/http): HTTP requests.
 
-[shared_preferences]("https://pub.dev/packages/shared_preferences"): Local storage.
+[shared_preferences](https://pub.dev/packages/shared_preferences): Local storage.
 
-[mockito]("https://pub.dev/packages/mockito"): mock framework to facilitate tests.
+[mockito](https://pub.dev/packages/mockito): mock framework to facilitate tests.
 
-[build_runner]("https://pub.dev/packages/build_runner"): code generation in Dart
+[build_runner](https://pub.dev/packages/build_runner): code generation in Dart
 
 ### Demo
 
-![App Demo](assets/demo.gif)
+<div align="center">
+  <img src="assets/demo.gif" alt="App Demo" width="350" />
+</div>
