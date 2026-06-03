@@ -65,7 +65,6 @@ build/
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
 
-
 ### https://raw.github.com/github/gitignore//Android.gitignore
 
 # Built application files
@@ -134,7 +133,6 @@ fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
 
-
 ### https://raw.github.com/github/gitignore//Dart.gitignore
 
 # See https://www.dartlang.org/guides/libraries/private-files
@@ -158,7 +156,6 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
-
 
 ### https://raw.github.com/github/gitignore//Global/JetBrains.gitignore
 
@@ -229,7 +226,6 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
-
 ### https://raw.github.com/github/gitignore//Global/macOS.gitignore
 
 # General
@@ -239,7 +235,6 @@ fabric.properties
 
 # Icon must end with two \r
 Icon
-
 
 # Thumbnails
 ._*
@@ -259,7 +254,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
 
 ### https://raw.github.com/github/gitignore//Global/Xcode.gitignore
 
@@ -286,7 +280,6 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-
 
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/Archives.gitignore
 
@@ -319,7 +312,6 @@ DerivedData/
 *.msm
 *.msp
 
-
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/Backup.gitignore
 
 *.bak
@@ -327,7 +319,6 @@ DerivedData/
 *.ori
 *.orig
 *.tmp
-
 
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Android.gitignore
 
@@ -397,7 +388,6 @@ fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
 
-
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Dart.gitignore
 
 # See https://www.dartlang.org/guides/libraries/private-files
@@ -422,12 +412,10 @@ doc/api/
 *.js.deps
 *.js.map
 
-
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/DartEditor.gitignore
 
 .project
 .buildlog
-
 
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/Emacs.gitignore
 
@@ -477,7 +465,6 @@ flycheck_*.el
 # directory configuration
 .dir-locals.el
 
-
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Gradle.gitignore
 
 .gradle
@@ -494,7 +481,6 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
-
 
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Java.gitignore
 
@@ -521,7 +507,6 @@ gradle-app.setting
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-
 
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/JetBrains.gitignore
 
@@ -592,7 +577,6 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
-
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/JEnv.gitignore
 
 # JEnv local Java version configuration file
@@ -600,7 +584,6 @@ fabric.properties
 
 # Used by previous versions of JEnv
 .jenv-version
-
 
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Kotlin.gitignore
 
@@ -628,7 +611,6 @@ fabric.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/Linux.gitignore
 
 *~
@@ -645,7 +627,6 @@ hs_err_pid*
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
-
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/macOS.gitignore
 
 # General
@@ -655,7 +636,6 @@ hs_err_pid*
 
 # Icon must end with two \r
 Icon
-
 
 # Thumbnails
 ._*
@@ -676,7 +656,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Maven.gitignore
 
 target/
@@ -689,7 +668,6 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
-
 
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Objective-C.gitignore
 
@@ -760,7 +738,6 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/SublimeText.gitignore
 
 # Cache files for Sublime Text
@@ -794,7 +771,6 @@ bh_unicode_properties.cache
 # https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
 
-
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/Vim.gitignore
 
 # Swap
@@ -815,7 +791,6 @@ tags
 # Persistent undo
 [._]*.un~
 
-
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/VisualStudioCode.gitignore
 
 .vscode/*
@@ -823,7 +798,6 @@ tags
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-
 
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/Windows.gitignore
 
@@ -851,7 +825,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-
 ### https://raw.github.com/github/gitignore/340e2fe08a2356c2e3760ff58c3a9e1fddf08060/Global/Xcode.gitignore
 
 # Xcode
@@ -878,7 +851,6 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 
-
 ### Flutter Generated Exceptions
 
 # Exceptions to above rules.
@@ -888,6 +860,8 @@ DerivedData/
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 
-
 # Generated files
 *.g.dart
+
+# FVM Version Cache
+.fvm/.flutter-plugins-dependencies
