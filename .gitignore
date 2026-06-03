@@ -864,4 +864,5 @@ DerivedData/
 *.g.dart
 
 # FVM Version Cache
-.fvm/.flutter-plugins-dependencies
+.fvm/
+.flutter-plugins-dependencies
