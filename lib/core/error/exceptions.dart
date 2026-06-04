@@ -4,3 +4,15 @@ class ServerException implements Exception {
 
   const ServerException({this.message, this.code});
 }
+
+class NetworkException implements Exception {
+  final String? message;
+
+  const NetworkException({this.message});
+}
+
+class CacheException implements Exception {
+  final String? message;
+
+  const CacheException({this.message});
+}
