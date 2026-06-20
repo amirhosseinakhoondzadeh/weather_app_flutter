@@ -4,12 +4,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:weather_app_flutter/features/weather/data/datasource/local_datasource.dart';
 import 'package:weather_app_flutter/features/weather/data/datasource/remote_datasource.dart';
 import 'package:weather_app_flutter/features/weather/data/datasource/saved_cities_local_datasource.dart';
+import 'package:weather_app_flutter/features/weather/data/datasource/search_history_local_datasource.dart';
 import 'package:weather_app_flutter/features/weather/domain/repository/saved_cities_repository.dart';
+import 'package:weather_app_flutter/features/weather/domain/repository/search_history_repository.dart';
 import 'package:weather_app_flutter/features/weather/domain/repository/weather_repository.dart';
 import 'package:weather_app_flutter/features/weather/domain/usecases/get_current_weather_usecase.dart';
 import 'package:weather_app_flutter/features/weather/domain/usecases/get_saved_cities_usecase.dart';
+import 'package:weather_app_flutter/features/weather/domain/usecases/get_search_history_usecase.dart';
 import 'package:weather_app_flutter/features/weather/domain/usecases/get_temperature_unit_usecase.dart';
 import 'package:weather_app_flutter/features/weather/domain/usecases/get_weather_forecast_usecase.dart';
+import 'package:weather_app_flutter/features/weather/domain/usecases/record_search_usecase.dart';
 import 'package:weather_app_flutter/features/weather/domain/usecases/remove_saved_city_usecase.dart';
 import 'package:weather_app_flutter/features/weather/domain/usecases/save_city_usecase.dart';
 import 'package:weather_app_flutter/features/weather/domain/usecases/save_temperature_unit_usecase.dart';
@@ -20,8 +24,10 @@ import 'package:weather_app_flutter/features/weather/domain/usecases/save_temper
   WeatherRemoteDataSource,
   WeatherLocalDataSource,
   SavedCitiesLocalDataSource,
+  SearchHistoryLocalDataSource,
   WeatherRepository,
   SavedCitiesRepository,
+  SearchHistoryRepository,
   GetCurrentWeatherUsecase,
   GetTemperatureUnitUsecase,
   GetWeatherForecastUsecase,
@@ -29,5 +35,7 @@ import 'package:weather_app_flutter/features/weather/domain/usecases/save_temper
   GetSavedCitiesUsecase,
   SaveCityUsecase,
   RemoveSavedCityUsecase,
+  GetSearchHistoryUsecase,
+  RecordSearchUsecase,
 ])
 void main() {}

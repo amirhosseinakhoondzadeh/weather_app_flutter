@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app_flutter/dependency_injection/injection.dart';
 import 'package:weather_app_flutter/features/weather/presentation/bloc/saved_cities/saved_cities_bloc.dart';
+import 'package:weather_app_flutter/features/weather/presentation/bloc/search_history/search_history_bloc.dart';
 import 'package:weather_app_flutter/features/weather/presentation/bloc/weather_bloc.dart';
 import 'package:weather_app_flutter/features/weather/presentation/pages/weather_page.dart';
 
@@ -17,6 +18,9 @@ class WeatherApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (_) => getIt<SavedCitiesBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => getIt<SearchHistoryBloc>(),
         ),
       ],
       child: MaterialApp(
