@@ -20,12 +20,12 @@ Refs: bloclibrary.dev "Modeling State", "FAQs", "Naming Conventions".
 
 ## Error taxonomy
 
-| Layer | Throws / returns |
-| :---- | :---- |
-| DataSource | throws `ServerException` (HTTP non-200), `NetworkException` (connectivity), `CacheException` (sqflite) |
+| Layer      | Throws / returns                                                                                                                                |
+| :--------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
+| DataSource | throws `ServerException` (HTTP non-200), `NetworkException` (connectivity), `CacheException` (sqflite)                                          |
 | Repository | catches each, maps to `ServerFailure` / `NetworkFailure` / `CacheFailure`, returns `Either<Failure, T>`; serves cache on network/server failure |
-| UseCase | passes the `Either` through (or composes several) |
-| Bloc | `fold`s the `Either` into a `loaded` / `error` state |
+| UseCase    | passes the `Either` through (or composes several)                                                                                               |
+| Bloc       | `fold`s the `Either` into a `loaded` / `error` state                                                                                            |
 
 No blanket `catch (e)`. Unexpected exceptions propagate so bugs surface in tests/observability instead of masquerading as failures.
 
@@ -37,7 +37,7 @@ Network-first, cache-fallback for reads: try remote -> write-through to sqflite 
 
 Two seams, every feature:
 
-1. Bloc (`bloc_test`, mocked UseCase): first page, next-page append, `hasReachedMax`.
+1. Paging (widget test): drive the real list and assert rows past the first page render. A bloc_test that fires the page event by hand does not count.
 2. Repository (mocked remote + local): remote throws -> cached `Right` (the offline guarantee).
 
 Mocks via `@GenerateMocks` + `build_runner`, mirroring the existing `test/.../mocks` setup.

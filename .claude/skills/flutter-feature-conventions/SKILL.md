@@ -14,7 +14,7 @@ How features are built in this codebase. Apply these on every feature you add or
 1. **The widget renders, it never decides.** UI dispatches events and renders the current state. All orchestration — fetching, paging, caching, error mapping — lives in the Bloc and below. No business logic, no `Future`s, no `try/catch` in widgets.
 2. **One immutable state; render every case.** Every async surface explicitly handles **loading / empty / error / data** — no silent or missing states. Empty is `loaded` with no items, rendered on purpose. Lists carry `hasReachedMax` and `isLoadingMore`. (Representation is the house default below; the _invariant_ — every case is rendered — is the rule.)
 3. **The repository is the source of truth; network-first with cache fallback.** Data sources throw typed exceptions; the repository writes through to the cache, serves the cache when the network is unavailable, and maps each exception to a _specific_ `Failure`, returning `Either<Failure, T>`. A read never surfaces a raw error when a cache exists.
-4. **Mandatory tests per feature: pagination + offline.** A `bloc_test` proves first-page load, next-page append, and reaching the end; a repository test proves the offline path (remote throws -> cached data returned as `Right`). No feature ships without them.
+4. **Mandatory tests per feature: pagination + offline.** A paging test must drive the real list and assert that rows past the first page appear. Firing the page event in a bloc test does not satisfy this. A repository test proves the offline path (remote throws -> cached data returned as `Right`). No feature ships without them.
 
 ## Layering
 
@@ -46,7 +46,7 @@ List/search blocs use `bloc_concurrency` transformers: `droppable()` for "load n
 - [ ] List paginates via the bloc with `hasReachedMax` + a `droppable()` transformer.
 - [ ] Offline: repository returns cached data (`Right`), not an error.
 - [ ] Each exception maps to a specific `Failure`; no catch-all, no silent `catch (e)`.
-- [ ] A `bloc_test` covers first page + next page + end, and a repository test covers offline fallback.
+- [ ] A paging test drives the real list and asserts rows past the first page appear, and a repository test covers offline fallback.
 
 ## Reference
 
