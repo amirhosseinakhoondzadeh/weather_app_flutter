@@ -866,3 +866,4 @@ DerivedData/
 # FVM Version Cache
 .fvm/
 .flutter-plugins-dependencies
+.claude/settings.local.json
