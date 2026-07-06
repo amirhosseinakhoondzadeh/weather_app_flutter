@@ -19,6 +19,9 @@ class WeatherLocalDataSourceImpl implements WeatherLocalDataSource {
 
   @override
   Future<String> getTemperatureUnit() async {
-    return sharedPreferences.getString(unitKey) ?? 'metric';
+    // Demo branch: pin the effective unit to metric so the frozen fixture
+    // numbers always render in Celsius (and wind in m/s), regardless of any
+    // previously stored preference.
+    return 'metric';
   }
 }

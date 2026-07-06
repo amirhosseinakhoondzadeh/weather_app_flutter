@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app_flutter/features/weather/domain/entities/temperature_unit.dart';
-import 'package:weather_app_flutter/features/weather/presentation/bloc/weather_bloc.dart';
 
 class TemperatureUnitSwitchWidget extends StatelessWidget {
   const TemperatureUnitSwitchWidget({
@@ -17,17 +15,14 @@ class TemperatureUnitSwitchWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(TemperatureUnit.celsius.symbol),
+        // Demo branch: display is pinned to metric, so the toggle is inert
+        // (disabled) and always reflects Celsius.
         Switch(
           value: temperatureUnit == TemperatureUnit.fahrenheit,
-          onChanged: (value) => _onUnitChanged(value, context),
+          onChanged: null,
         ),
         Text(TemperatureUnit.fahrenheit.symbol),
       ],
     );
-  }
-
-  void _onUnitChanged(value, BuildContext context) {
-    context.read<WeatherBloc>().add(WeatherTemperatureUnitChanged(
-        value ? TemperatureUnit.fahrenheit : TemperatureUnit.celsius));
   }
 }
