@@ -106,10 +106,12 @@ class Main {
 class Wind {
   final double speed;
   final int deg;
+  final double? gust;
 
   Wind({
     required this.speed,
     required this.deg,
+    this.gust,
   });
 
   factory Wind.fromJson(Map<String, dynamic> json) => _$WindFromJson(json);

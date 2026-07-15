@@ -121,3 +121,13 @@ open coverage/html/index.html
 <div align="center">
   <img src="assets/demo.gif" alt="App Demo" width="350" />
 </div>
+
+## Keeping generated code honest (build_runner)
+
+Part of this app's parsing lives in generated code (`*.g.dart` via `json_serializable`). A generated file is a derived artifact, not source: a clean `git diff` cannot tell whether a line was regenerated from the model or typed by hand. This branch demonstrates three layers that make regeneration something neither you nor a coding agent can skip.
+
+- Dev loop: `dart run build_runner watch --delete-conflicting-outputs`. It watches your source and rebuilds every generated file on save, so hand-editing a `.g.dart` buys nothing.
+- Repo: `.github/workflows/codegen-check.yml` runs a clean `build_runner build` then `git diff --exit-code`, so CI fails if what is committed is not byte-for-byte what the generator produces.
+- Agent: `.claude/hooks/build_runner.sh` (a Claude Code PostToolUse hook) regenerates the moment a model file changes.
+
+Walkthrough: https://www.youtube.com/watch?v=V4JAB44xICo

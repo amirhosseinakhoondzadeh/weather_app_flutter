@@ -7,6 +7,7 @@ class WeatherEntity extends Equatable {
   final int humidity;
   final int pressure;
   final double windSpeed;
+  final double? windGust;
   final String icon;
   final DateTime date;
   final double tempMin;
@@ -19,6 +20,7 @@ class WeatherEntity extends Equatable {
     required this.humidity,
     required this.pressure,
     required this.windSpeed,
+    this.windGust,
     required this.icon,
     required this.date,
     required this.tempMax,
@@ -26,13 +28,14 @@ class WeatherEntity extends Equatable {
   });
 
   @override
-  List<Object> get props => [
+  List<Object?> get props => [
         cityName,
         temperature,
         description,
         humidity,
         pressure,
         windSpeed,
+        windGust,
         icon,
         date,
         tempMax,

@@ -35,6 +35,7 @@ class WeatherRepositoryImpl implements WeatherRepository {
         humidity: weatherModel.main.humidity,
         pressure: weatherModel.main.pressure,
         windSpeed: weatherModel.wind.speed,
+        windGust: weatherModel.wind.gust,
         icon: weatherModel.weather.first.icon,
         date: DateTimeConverter.fromUnixTimestamp(weatherModel.dt),
         tempMax: weatherModel.main.temp_max,
@@ -91,6 +92,7 @@ class WeatherRepositoryImpl implements WeatherRepository {
         final humidity = forecasts.first.main.humidity;
         final pressure = forecasts.first.main.pressure;
         final windSpeed = forecasts.first.wind.speed;
+        final windGust = forecasts.first.wind.gust;
 
         return WeatherEntity(
           date: date,
@@ -102,6 +104,7 @@ class WeatherRepositoryImpl implements WeatherRepository {
           humidity: humidity,
           pressure: pressure,
           windSpeed: windSpeed,
+          windGust: windGust,
           cityName: forecastModel.city.name,
         );
       }).toList();

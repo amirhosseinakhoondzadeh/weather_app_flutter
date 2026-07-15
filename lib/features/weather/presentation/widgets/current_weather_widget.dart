@@ -62,6 +62,16 @@ class CurrentWeatherWidget extends StatelessWidget {
             style: theme.textTheme.labelLarge,
           ),
         ),
+        if (weatherEntity.windGust != null) ...[
+          SizedBox(height: 4),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Text(
+              "Wind Gust: ${weatherEntity.windGust} m/s",
+              style: theme.textTheme.labelLarge,
+            ),
+          ),
+        ],
       ],
     );
   }
