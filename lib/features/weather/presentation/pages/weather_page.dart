@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app_flutter/features/weather/presentation/bloc/saved_cities/saved_cities_bloc.dart';
 import 'package:weather_app_flutter/features/weather/presentation/bloc/weather_bloc.dart';
+import 'package:weather_app_flutter/features/weather/presentation/pages/saved_cities_page.dart';
 import 'package:weather_app_flutter/features/weather/presentation/widgets/search_bar_widget.dart';
 import 'package:weather_app_flutter/features/weather/presentation/widgets/temperature_unit_switch_widget.dart';
 import 'package:weather_app_flutter/features/weather/presentation/widgets/weather_error_widget.dart';
@@ -24,6 +26,35 @@ class WeatherPage extends StatelessWidget {
                   temperatureUnit: state.temperatureUnit,
                 ),
               Spacer(),
+              if (state.status == WeatherStateStatus.loaded &&
+                  state.weatherEntity != null)
+                IconButton(
+                  icon: const Icon(Icons.bookmark_add_outlined),
+                  tooltip: 'Save city',
+                  onPressed: () {
+                    context
+                        .read<SavedCitiesBloc>()
+                        .add(CitySaved(state.weatherEntity!));
+                    ScaffoldMessenger.of(context)
+                      ..hideCurrentSnackBar()
+                      ..showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            '${state.weatherEntity!.cityName} saved',
+                          ),
+                        ),
+                      );
+                  },
+                ),
+              IconButton(
+                icon: const Icon(Icons.list),
+                tooltip: 'Saved cities',
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const SavedCitiesPage(),
+                  ),
+                ),
+              ),
               if (state.status == WeatherStateStatus.loaded)
                 SearchBarWidget(city: state.city),
               SizedBox(width: 16),

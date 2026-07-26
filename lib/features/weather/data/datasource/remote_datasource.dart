@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:http/http.dart' as http;
 import 'package:weather_app_flutter/core/error/exceptions.dart';
@@ -35,7 +36,14 @@ class WeatherRemoteDataSourceImpl implements WeatherRemoteDataSource {
       },
     );
 
-    final response = await client.get(uri);
+    final http.Response response;
+    try {
+      response = await client.get(uri);
+    } on SocketException catch (e) {
+      throw NetworkException(message: e.message);
+    } on http.ClientException catch (e) {
+      throw NetworkException(message: e.message);
+    }
 
     if (response.statusCode == 200) {
       return fromJson(json.decode(response.body));

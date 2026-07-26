@@ -45,6 +45,8 @@ class WeatherRepositoryImpl implements WeatherRepository {
       return Right(weatherEntity);
     } on ServerException catch (e) {
       return Left(ServerFailure(e.message ?? ''));
+    } on NetworkException catch (e) {
+      return Left(NetworkFailure(e.message ?? ''));
     } catch (e) {
       return Left(CacheFailure(e.toString()));
     }
@@ -118,6 +120,8 @@ class WeatherRepositoryImpl implements WeatherRepository {
       return Right(forecastEntity);
     } on ServerException catch (e) {
       return Left(ServerFailure(e.message ?? ''));
+    } on NetworkException catch (e) {
+      return Left(NetworkFailure(e.message ?? ''));
     } catch (e) {
       return Left(CacheFailure(e.toString()));
     }
