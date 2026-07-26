@@ -44,22 +44,19 @@ void main() {
   });
 
   group('getTemperatureUnit', () {
-    test('should return the saved temperature unit from SharedPreferences',
-        () async {
+    test('should return "metric" even when another unit is stored', () async {
       // Arrange
-      const String savedUnit = 'imperial';
-      when(mockSharedPreferences.getString(unitKey)).thenReturn(savedUnit);
+      when(mockSharedPreferences.getString(unitKey)).thenReturn('imperial');
 
       // Act
       final result = await dataSource.getTemperatureUnit();
 
       // Assert
-      expect(result, savedUnit);
-      verify(mockSharedPreferences.getString(unitKey)).called(1);
+      expect(result, 'metric');
+      verifyNever(mockSharedPreferences.getString(unitKey));
     });
 
-    test('should return the default unit "metric" if no value is saved',
-        () async {
+    test('should return "metric" if no value is saved', () async {
       // Arrange
       when(mockSharedPreferences.getString(unitKey)).thenReturn(null);
 
@@ -68,7 +65,7 @@ void main() {
 
       // Assert
       expect(result, 'metric');
-      verify(mockSharedPreferences.getString(unitKey)).called(1);
+      verifyNever(mockSharedPreferences.getString(unitKey));
     });
   });
 }
