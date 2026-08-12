@@ -1,18 +1,13 @@
-# Flutter Weather App Sample
+# weather_app_flutter
 
-## Description
+A Flutter weather app built on Clean Architecture. It reads current
+conditions and the forecast for a city from
+[OpenWeatherMap](https://openweathermap.org/api), and it comes with 13
+tests over the bloc, the local datasource and both use cases.
 
-A Flutter project which showcase the connection to [openweathermap](https://openweathermap.org/api) to fetch the weather condition of the given city and its forecast, following Clean Architecture principles.
-
-## Table of Contents
-
-- [Description](#description)
-- [Project Setup and Installation](#project-setup-and-installation)
-- [Application Structure and Features](#application-structure-and-features)
-- [Usage Instructions](#usage-instructions)
-- [Testing](#testing)
-- [Dependencies](#dependencies)
-- [Code Documentation](#code-documentation)
+<div align="center">
+  <img src="assets/demo.gif" alt="App Demo" width="350" />
+</div>
 
 ## Project Setup and Installation
 
@@ -116,8 +111,6 @@ open coverage/html/index.html
 
 [build_runner](https://pub.dev/packages/build_runner): code generation in Dart
 
-### Demo
+## License
 
-<div align="center">
-  <img src="assets/demo.gif" alt="App Demo" width="350" />
-</div>
+MIT. See [LICENSE](LICENSE).
